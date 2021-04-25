@@ -1,5 +1,5 @@
 :root {
-  --secondary: #353535;
+  --secondary: #566246;
   --bg-color: #fff;
   --primary: #480ca8;
   --light: #d0b7f8;
@@ -86,10 +86,10 @@ html {
 }
 .socials-link {
   font-size: 2rem;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .socials-link:hover {
-  color: var(--primary);
+  color: var(--light);
 }
 
 .socials-btn {
@@ -100,11 +100,11 @@ html {
   outline: none;
   animation: bounce 2s ease-in-out infinite;
   transition: all ease -2s;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .socials-btn:hover {
-  color: var(--primary);
+  color: var(--light);
 }
 
 @keyframes bounce {
@@ -178,19 +178,48 @@ html {
 }
 
 .nav-link:hover {
-  color: var(--secondary);
+  color: var(--light);
 }
 
 /* banner */
 
 .header {
   height: 100vh;
+  justify-content: center;
 }
 
 .banner {
-  margin-left: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-image-container {
+  position: relative;
+  width: 30rem;
+  height: 40rem;
+  margin-left: 10rem;
   opacity: 0;
+  animation: ContentFadeIn 0.8s 1.6s forwards ease-in;
+}
+
+.banner-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.a {
+  fill: transparent;
+  stroke: var(--primary);
+}
+.b {
+  fill: var(--light);
+}
+
+.banner-text {
   animation: ContentFadeIn 0.8s 1.2s forwards ease-in;
+  opacity: 0;
 }
 
 .banner-title {
@@ -202,7 +231,7 @@ html {
   margin-top: 1rem;
   color: var(--primary);
 }
-.banner-text {
+.banner-paraghraph {
   font-size: 2rem;
   margin: 1rem 0 7rem 0;
   color: var(--secondary);
@@ -227,10 +256,9 @@ html {
 .about-section {
   padding: 8rem 0;
   flex-direction: column;
+  justify-content: center;
 }
 .about-text {
-  max-width: 55%;
-  margin-right: 20rem;
   opacity: 0;
   animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
 }
@@ -260,7 +288,7 @@ html {
   align-items: center;
 }
 .about-info-text {
-  width: 65%;
+  max-width: 50rem;
 }
 .about-info {
   font-size: 1.7rem;
@@ -382,7 +410,7 @@ html {
   flex-direction: column;
 }
 .projects-title-container {
-  width: 35%;
+  width: 50rem;
   position: relative;
   margin-bottom: 10rem;
 }
@@ -435,15 +463,15 @@ html {
   border-bottom: 0.3rem solid var(--primary);
 }
 .projects-container {
-  width: 60%;
   display: grid;
   align-items: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5rem;
 }
 
 .project-item {
-  width: 70%;
+  width: 30rem;
   margin-bottom: 5rem;
   opacity: 0;
   border-radius: 0.3rem;
@@ -509,7 +537,7 @@ html {
     d: path(
       "M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400"
     );
-    stroke: #545581;
+    stroke: var(--light);
   }
 }
 
@@ -553,7 +581,7 @@ html {
   font-size: 2rem;
   text-align: center;
   padding-bottom: 2rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 .project-info {
   font-size: 1.5rem;
@@ -568,19 +596,18 @@ html {
 }
 .project-icons a {
   font-size: 2.5rem;
-  color: var(--secondary);
+  color: var(--primary);
   padding: 0 1rem;
   margin: 1rem;
 }
 .project-icons a:hover {
-  color: var(--primary);
+  color: var(--light);
 }
 .circle {
   height: 20rem;
   width: 20rem;
   position: absolute;
-
-  border: 0.1rem solid var(--secondary);
+  border: 0.5rem solid var(--light);
   border-radius: 100%;
   opacity: 0;
   animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
@@ -601,10 +628,28 @@ html {
   padding: 15rem 0;
 }
 .contact-container {
-  width: 35%;
-  text-align: center;
+  display: flex;
+  align-items: center;
   opacity: 0;
   animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
+}
+.contact-image-container {
+  width: 30rem;
+  height: 27rem;
+  margin-right: 5rem;
+}
+.contact-image {
+  width: 100%;
+  height: 100%;
+}
+
+.path-1 {
+  fill: var(--light);
+}
+
+.contact-text {
+  width: 40rem;
+  text-align: center;
 }
 .contact-title-container {
   justify-content: center;
@@ -614,17 +659,15 @@ html {
   margin-left: 1rem;
   color: var(--primary);
 }
-.contact-title-line {
-  width: 35%;
-}
+
 .contact-title span {
   color: var(--secondary);
 }
-.contact-text {
+.contact-paragraph {
   font-size: 1.7rem;
   margin: 6rem auto 4rem auto;
   line-height: 2.5rem;
-  width: 80%;
+  width: 85%;
   text-align: left;
   color: var(--secondary);
 }
@@ -649,12 +692,12 @@ html {
 
 .footer-icons a {
   transition: all 0.2s;
-  color: var(--secondary);
+  color: var(--primary);
   padding: 1rem;
 }
 
 .footer-icons a:hover {
-  color: var(--primary);
+  color: var(--light);
 }
 
 .footer-text {
@@ -664,35 +707,48 @@ html {
 
 /* responsive */
 
-@media screen and (max-width: 1200px) {
-  /* banner */
-  .header {
-    justify-content: center;
-  }
-
+@media screen and (max-width: 1260px) {
   .banner {
-    margin-left: 0;
+    max-width: 90%;
+    margin-left: 3rem;
   }
-
   .banner-title {
     font-size: 4rem;
   }
   .banner-subtitle {
-    font-size: 6rem;
+    font-size: 5rem;
   }
+}
+@media screen and (max-width: 985px) {
+  .banner {
+    max-width: 80%;
+  }
+  .banner-title {
+    font-size: 3rem;
+  }
+  .banner-subtitle {
+    font-size: 4rem;
+  }
+}
 
+@media screen and (max-width: 860px) {
+  .banner {
+    margin-left: 0;
+  }
+  .banner-image-container {
+    display: none;
+  }
+  .contact-image-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
   /* about */
 
-  .about-section {
-    justify-content: center;
-  }
-  .about-text {
-    max-width: 70%;
-    margin-right: 0;
-  }
   .jobs-section {
     position: unset;
-    width: 50rem;
+    width: 40rem;
+
     left: unset;
   }
 
@@ -701,51 +757,23 @@ html {
   .projects-title-container {
     width: 50%;
   }
-
-  .projects-container {
-    width: 70%;
-  }
-
-  .project-item {
-    width: 80%;
-  }
-  .contact-container {
-    width: 50%;
-  }
 }
 @media screen and (max-width: 1000px) {
-  /* banner */
-  .banner {
-    max-width: 90%;
-  }
-
   /* about */
-  .about-title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5rem;
-  }
-
   .info-container {
     justify-content: center;
-
     flex-direction: column;
+  }
+  .about-text {
+    max-width: 60%;
+  }
+  .about-line {
+    width: 40%;
   }
 
   .profile-image-container {
     margin-left: 0;
     margin-top: 5rem;
-  }
-
-  /* projects */
-
-  .projects-container {
-    width: 80%;
-  }
-
-  .project-item {
-    width: 80%;
   }
 }
 
@@ -753,22 +781,14 @@ html {
   .title {
     font-size: 2.5rem;
   }
-  .banner-title {
-    font-size: 4rem;
-  }
-  .banner-subtitle {
-    font-size: 4rem;
-  }
-  .banner-text {
-    font-size: 1.5rem;
-  }
+
   /* about */
-  .about-title-container {
-    justify-content: flex-start;
-    padding-left: 2rem;
+
+  .about-text {
+    max-width: 70%;
   }
-  .about-info-text {
-    width: 90%;
+  .about-line {
+    height: 0.05rem;
   }
 
   /* projects */
@@ -776,13 +796,7 @@ html {
   .projects-container {
     grid-template-columns: 1fr;
   }
-  .projects-container {
-    width: 80%;
-  }
 
-  .project-item {
-    width: 60%;
-  }
   /* contact */
   .contact-container {
     width: 60%;
@@ -791,8 +805,9 @@ html {
 
 @media screen and (max-width: 580px) {
   /* about */
+
   .about-text {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .jobs-section {
@@ -803,6 +818,10 @@ html {
     font-size: 2.3rem;
   }
 
+  .jobs-section {
+    max-width: 37rem;
+  }
+
   /* projects */
   .projects-title-container {
     width: 70%;
@@ -811,9 +830,7 @@ html {
   .category-btn {
     font-size: 1.3rem;
   }
-  .project-item {
-    width: 70%;
-  }
+
   /* contact */
   .contact-container {
     width: 75%;
@@ -875,18 +892,24 @@ html {
 .path1 {
   stroke-dasharray: 2867.95;
   stroke-dashoffset: 2867.95;
-  animation: line-anime 2s 1s ease forwards;
+  animation: line-anime 2s 0.5s ease forwards;
   stroke: var(--primary);
 }
 .path2 {
-  stroke-dasharray: 1691.41;
-  stroke-dashoffset: 1691.41;
-  animation: line-anime 2s 1s ease forwards;
+  /* stroke-dasharray: 1691.41;
+  stroke-dashoffset: 1691.41; */
+  opacity: 0;
+  animation: line-2-anime 1s 2.5s ease forwards;
   stroke: var(--primary);
 }
 
 @keyframes line-anime {
   to {
     stroke-dashoffset: 0;
+  }
+}
+@keyframes line-2-anime {
+  to {
+    opacity: 1;
   }
 }
