@@ -1,11 +1,33 @@
-import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaBars, FaMoon, FaSun } from "react-icons/fa";
 import logo from "../logo/logo.svg";
 import Socials from "./Socials";
+
+const getStorageTheme = () => {
+  let theme = "light-theme";
+  if (localStorage.getItem("theme")) {
+    theme = localStorage.getItem("theme");
+  }
+  return theme;
+};
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [navActive, setNavActive] = useState(false);
+  const [theme, setTheme] = useState(getStorageTheme());
+
+  const toggleTheme = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
+    }
+  };
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const fixNav = () => {
     const screenPos = window.pageYOffset;
@@ -44,41 +66,57 @@ const Navbar = () => {
             />
           </svg>
         </a>
-
-        <ul className={`nav-menu ${show && "nav-menu-active"}`}>
-          <li className="nav-item">
-            <a href="#home" className="nav-link" onClick={() => setShow(false)}>
-              <span>1.</span> Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#about"
-              className="nav-link"
-              onClick={() => setShow(false)}
-            >
-              <span>2.</span> About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#projects"
-              className="nav-link"
-              onClick={() => setShow(false)}
-            >
-              <span>3.</span> Projects
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#contact"
-              className="nav-link"
-              onClick={() => setShow(false)}
-            >
-              <span>4.</span> Contact
-            </a>
-          </li>
-        </ul>
+        <div className="nav-theme">
+          <a
+            className="theme-btn"
+            onClick={toggleTheme}
+            style={
+              theme === "light-theme"
+                ? { color: "orange" }
+                : { color: "#e4e4e4", fontSize: "2rem" }
+            }
+          >
+            {theme === "light-theme" ? <FaSun /> : <FaMoon />}
+          </a>
+          <ul className={`nav-menu ${show && "nav-menu-active"}`}>
+            <li className="nav-item">
+              <a
+                href="#home"
+                className="nav-link"
+                onClick={() => setShow(false)}
+              >
+                <span>1.</span> Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#about"
+                className="nav-link"
+                onClick={() => setShow(false)}
+              >
+                <span>2.</span> About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#projects"
+                className="nav-link"
+                onClick={() => setShow(false)}
+              >
+                <span>3.</span> Projects
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#contact"
+                className="nav-link"
+                onClick={() => setShow(false)}
+              >
+                <span>4.</span> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
         <button className="menu-btn" onClick={() => setShow(!show)}>
           <FaBars />
         </button>
@@ -106,7 +144,7 @@ const Navbar = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M1399.99 0H0V980H1399.99V0Z" fill="white" />
+            <path className="c" d="M1399.99 0H0V980H1399.99V0Z" fill="white" />
             <path
               className="a"
               d="M981.697 591.581V922.528H1056.51V541.868H981.697V591.581Z"

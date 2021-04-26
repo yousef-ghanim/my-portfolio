@@ -3,7 +3,25 @@
   --bg-color: #fff;
   --primary: #480ca8;
   --light: #d0b7f8;
+  --shadow: #d0b7f8;
 }
+
+.dark-theme {
+  --secondary: #e4e4e4;
+  --bg-color: #0d1b2a;
+  --primary: #763dd1;
+  --light: #786892;
+  --shadow: #0a0c16;
+}
+
+.light-theme {
+  --secondary: #566246;
+  --bg-color: #fff;
+  --primary: #480ca8;
+  --light: #d0b7f8;
+  --shadow: #d0b7f8;
+}
+
 *,
 ::after,
 ::before {
@@ -11,6 +29,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: var(--bg-color);
 }
 html {
   font-size: 62.5%;
@@ -27,7 +48,6 @@ html {
 .logo-container {
   width: 5rem;
   height: 5rem;
-
   opacity: 0;
   animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
 }
@@ -130,6 +150,7 @@ html {
   outline: none;
   cursor: pointer;
 }
+
 .menu-btn:hover {
   transform: rotate(-90deg);
 }
@@ -143,12 +164,26 @@ html {
   position: absolute;
   padding: 1rem 3rem;
   background-color: var(--bg-color);
+  opacity: 0;
+  animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
 }
 
 .nav-active {
   position: fixed;
-  box-shadow: 0.1rem 0.3rem 0.3rem var(--light);
+  box-shadow: 0.3rem 0.2rem 1rem var(--shadow);
   z-index: 3;
+}
+
+.nav-theme {
+  display: flex;
+  align-items: center;
+}
+
+.theme-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin-right: 3rem;
 }
 
 .nav-menu {
@@ -157,8 +192,9 @@ html {
   flex-wrap: 1;
   justify-content: space-between;
   align-items: center;
-  opacity: 0;
-  animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
+  /* opacity: 0;
+  animation: ContentFadeIn 0.8s 0.8s forwards ease-in; */
+  background-color: var(--bg-color);
 }
 
 .nav-link {
@@ -169,7 +205,7 @@ html {
   vertical-align: center;
   font-size: 1.5rem;
   color: var(--primary);
-  transition: all 0.1s;
+  transition: hover 0.1s;
   font-weight: 700;
 }
 
@@ -192,6 +228,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0;
+  animation: ContentFadeIn 0.8s 1.6s forwards ease-in;
 }
 
 .banner-image-container {
@@ -199,12 +237,9 @@ html {
   width: 30rem;
   height: 40rem;
   margin-left: 10rem;
-  opacity: 0;
-  animation: ContentFadeIn 0.8s 1.6s forwards ease-in;
 }
 
 .banner-image {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -216,10 +251,8 @@ html {
 .b {
   fill: var(--light);
 }
-
-.banner-text {
-  animation: ContentFadeIn 0.8s 1.2s forwards ease-in;
-  opacity: 0;
+.c {
+  fill: var(--bg-color);
 }
 
 .banner-title {
@@ -245,7 +278,6 @@ html {
   font-weight: 700;
   padding: 1.5rem 2.5rem;
   border-radius: 0.3rem;
-  transition: all 0.1s;
   text-decoration: none;
 }
 .btn:hover {
@@ -495,7 +527,7 @@ html {
   transform: scale(1.5);
 }
 .project-item:hover {
-  box-shadow: 0.1rem 2rem 2rem var(--light);
+  box-shadow: 0.1rem 2rem 2rem var(--shadow);
 }
 .img-container {
   overflow: hidden;
@@ -843,6 +875,12 @@ html {
     display: block;
   }
 
+  .theme-btn {
+    position: absolute;
+    right: 9rem;
+    margin: 0;
+  }
+
   .nav {
     position: fixed;
     z-index: 2;
@@ -855,21 +893,18 @@ html {
     left: 0;
     right: 0;
     text-align: center;
-
     top: 6rem;
-    background-color: var(--bg-color);
-
     padding-bottom: 1rem;
     padding-left: 1rem;
     height: 0rem;
-    transition: all 0.5s ease;
+    transition: height 0.3s ease, box-shadow 0.1s ease;
     overflow: hidden;
     z-index: 5;
   }
 
   .nav-menu-active {
     height: 20rem;
-    box-shadow: 0.1rem 0.3rem 0.3rem var(--light);
+    box-shadow: 0.1rem 0.3rem 0.3rem var(--shadow);
   }
 
   .nav-item {
@@ -883,6 +918,7 @@ html {
 
 #loading-logo {
   width: 20rem;
+  height: 20rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -896,8 +932,6 @@ html {
   stroke: var(--primary);
 }
 .path2 {
-  /* stroke-dasharray: 1691.41;
-  stroke-dashoffset: 1691.41; */
   opacity: 0;
   animation: line-2-anime 1s 2.5s ease forwards;
   stroke: var(--primary);
