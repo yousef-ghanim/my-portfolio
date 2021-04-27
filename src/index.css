@@ -38,12 +38,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Header */
-
 .section {
   display: flex;
   align-items: center;
 }
+
+/* Header */
 
 .logo-container {
   width: 5rem;
@@ -192,8 +192,6 @@ html {
   flex-wrap: 1;
   justify-content: space-between;
   align-items: center;
-  /* opacity: 0;
-  animation: ContentFadeIn 0.8s 0.8s forwards ease-in; */
   background-color: var(--bg-color);
 }
 
@@ -657,7 +655,7 @@ html {
 
 .contact-section {
   justify-content: center;
-  padding: 15rem 0;
+  padding: 13rem 0;
 }
 .contact-container {
   display: flex;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaMoon, FaSun } from "react-icons/fa";
-import logo from "../logo/logo.svg";
 import Socials from "./Socials";
 
 const getStorageTheme = () => {
@@ -11,7 +10,7 @@ const getStorageTheme = () => {
   return theme;
 };
 
-const Navbar = () => {
+const Header = () => {
   const [show, setShow] = useState(false);
   const [navActive, setNavActive] = useState(false);
   const [theme, setTheme] = useState(getStorageTheme());
@@ -42,7 +41,7 @@ const Navbar = () => {
   return (
     <header className="section header" id="home">
       <Socials />
-      <nav className={`nav ${navActive ? "nav-active" : null}`}>
+      <nav className={`nav ${navActive && "nav-active"}`}>
         <a className="logo-container" href="#home">
           <svg
             className="logo"
@@ -647,4 +646,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
