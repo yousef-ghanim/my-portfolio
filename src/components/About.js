@@ -17,9 +17,9 @@ const About = () => {
         <div className="info-container">
           <div className="about-info-text">
             <p className="about-info">
-              My name is Yousef, a self-taught front-end developer, based on
+              My name is Yousef, a self-taught front-end developer, based in
               Iceland. I had a crazy long journey that led me to be a web
-              developer (my recent job was a university lecturer). <br />
+              developer (my recent job was a university instructor). <br />
               <br />I build and develop websites using the latest modern
               development languages and tools, Including but not limited to:
             </p>

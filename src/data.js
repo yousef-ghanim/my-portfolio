@@ -4,8 +4,7 @@ const jobs = [
     job: "University instructor",
     year: "2017 - 2018",
     company: "Arab American University",
-    info:
-      "courses: Advertising, Electronic Media, Media Language in English, Photojournalism.",
+    info: "courses: Advertising, Electronic Media, Media Language in English, Photojournalism.",
   },
 
   {
@@ -33,6 +32,25 @@ const jobs = [
 
 export const projects = [
   {
+    id: 3,
+    title: "Github-user",
+    category: "React",
+    preview: "https://github-search-eng.netlify.app/",
+    code: "https://github.com/yousef-ghanim/github-user-search",
+    desc: "Using login authentication to search for Github users using Github API.",
+    image: "./images/github-user.jpg",
+  },
+
+  {
+    id: 7,
+    title: "Form validation",
+    category: "JavaScript",
+    preview: "https://yousef-ghanim.github.io/form-validation/",
+    code: "https://github.com/yousef-ghanim/form-validation",
+    desc: "A form validation contains username, email, and password.",
+    image: "./images/form-validation.jpg",
+  },
+  {
     id: 1,
     title: "Cocktails",
     category: "React",
@@ -42,22 +60,12 @@ export const projects = [
     image: "./images/cocktails.jpg",
   },
   {
-    id: 7,
-    title: "Form validation",
-    category: "JavaScript",
-    preview: "https://yousef-ghanim.github.io/Memory-game/",
-    code: "https://github.com/yousef-ghanim/form-validation",
-    desc: "A form validation contains username, email, and password.",
-    image: "./images/form-validation.jpg",
-  },
-  {
     id: 2,
     title: "Cart",
     category: "React",
     preview: "https://yousef-ghanim.github.io/cart-react/",
     code: "https://github.com/yousef-ghanim/cart-react",
-    desc:
-      "Using react hooks of useReducer and useContext to build a shopping cart",
+    desc: "Using react hooks of useReducer and useContext to build a shopping cart",
     image: "./images/cart.jpg",
   },
   {
@@ -66,19 +74,10 @@ export const projects = [
     category: "JavaScript",
     preview: "https://yousef-ghanim.github.io/forkify/",
     code: "https://github.com/yousef-ghanim/forkify",
-    desc:
-      "A large-scale JavaScript app, as a final project of JS Udemy course.",
+    desc: "A large-scale JavaScript app, as a final project of JS Udemy course.",
     image: "./images/forkify.jpg",
   },
-  {
-    id: 3,
-    title: "Grocery-bud",
-    category: "React",
-    preview: "https://yousef-ghanim.github.io/grocery-bud-react/",
-    code: "https://github.com/yousef-ghanim/grocery-bud-react",
-    desc: "A to-do app with ability to edit and remove items.",
-    image: "./images/grocery.jpg",
-  },
+
   {
     id: 4,
     title: "Submenu & sidebar",

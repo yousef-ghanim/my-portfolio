@@ -480,6 +480,7 @@ html {
   color: var(--secondary);
   outline: none;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .category-btn:hover {
