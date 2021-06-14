@@ -77,17 +77,15 @@ export const projects = [
     desc: "A large-scale JavaScript app, as a final project of JS Udemy course.",
     image: "./images/forkify.jpg",
   },
-
   {
     id: 4,
-    title: "Submenu & sidebar",
+    title: "My Portfolio",
     category: "React",
-    preview: "https://yousef-ghanim.github.io/stripe-submenu-react/",
-    code: "https://github.com/yousef-ghanim/stripe-submenu-react",
-    desc: "Submenu and sidebar.",
-    image: "./images/submenu.jpg",
+    preview: "https://yghanim.com/",
+    code: "https://github.com/yousef-ghanim/my-portfolio",
+    desc: "My Portfolio website. built from scratch with Reactjs.",
+    image: "./images/portfolio.jpg",
   },
-
   {
     id: 6,
     title: "Memory game",
