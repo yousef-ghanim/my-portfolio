@@ -946,13 +946,13 @@ html {
   stroke-dasharray: 2867.95;
   stroke-dashoffset: 2867.95;
   /* animation: line-anime 2s 0.5s ease forwards; */
-  animation: line-anime 1s 0s ease forwards;
+  animation: line-anime 0.5s 0s ease forwards;
   stroke: var(--primary);
 }
 .path2 {
   opacity: 0;
   /* animation: line-2-anime 1s 2.5s ease forwards; */
-  animation: line-2-anime 1s 1s ease forwards;
+  animation: line-2-anime 0.5s 0s ease forwards;
   stroke: var(--primary);
 }
 
