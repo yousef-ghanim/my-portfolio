@@ -54,6 +54,7 @@ const About = () => {
             {jobs.map((item, index) => {
               return (
                 <button
+                  aria-label="Job_btn"
                   key={item.id}
                   onClick={() => setValue(index)}
                   className={`job-btn ${index === value && "active-job-btn"}`}

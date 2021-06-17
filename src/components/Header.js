@@ -42,7 +42,7 @@ const Header = () => {
     <header className="section header" id="home">
       <Socials />
       <nav className={`nav ${navActive && "nav-active"}`}>
-        <a className="logo-container" href="#home">
+        <a aria-label="Logo" className="logo-container" href="#home">
           <svg
             className="logo"
             width="916"
@@ -80,6 +80,7 @@ const Header = () => {
           <ul className={`nav-menu ${show && "nav-menu-active"}`}>
             <li className="nav-item">
               <a
+                aria-label="Home"
                 href="#home"
                 className="nav-link"
                 onClick={() => setShow(false)}
@@ -89,6 +90,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
+                aria-label="About"
                 href="#about"
                 className="nav-link"
                 onClick={() => setShow(false)}
@@ -98,6 +100,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
+                aria-label="Projects"
                 href="#projects"
                 className="nav-link"
                 onClick={() => setShow(false)}
@@ -107,6 +110,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
+                aria-label="Contact"
                 href="#contact"
                 className="nav-link"
                 onClick={() => setShow(false)}
@@ -116,7 +120,11 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <button className="menu-btn" onClick={() => setShow(!show)}>
+        <button
+          aria-label="Menu"
+          className="menu-btn"
+          onClick={() => setShow(!show)}
+        >
           <FaBars />
         </button>
       </nav>
@@ -130,7 +138,11 @@ const Header = () => {
             I enjoy building functioning elegant websites that meet your
             business needs.
           </p>
-          <a href="mailto: yousefghanim85@gmail.com" className="btn">
+          <a
+            aria-label="Email"
+            href="mailto: yousefghanim85@gmail.com"
+            className="btn"
+          >
             Get In Touch
           </a>
         </div>

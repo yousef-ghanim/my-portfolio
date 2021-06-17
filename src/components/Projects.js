@@ -35,6 +35,7 @@ const Projects = () => {
         {allCategories.map((category, index) => {
           return (
             <button
+              aria-label="Project_btn"
               key={index}
               className={`category-btn ${
                 category === itemcategory ? "category-btn-active" : null
@@ -75,11 +76,11 @@ const Projects = () => {
                 <p className="project-info">{desc}</p>
               </div>
               <div className="project-icons">
-                <a href={code} target="_blank">
+                <a aria-label="Source_code" href={code} target="_blank">
                   <FaGithub />
                 </a>
 
-                <a href={preview} target="_blank">
+                <a aria-label="Project_preview" href={preview} target="_blank">
                   <FaEye />
                 </a>
               </div>

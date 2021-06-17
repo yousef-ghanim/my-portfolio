@@ -49,7 +49,7 @@ html {
   width: 5rem;
   height: 5rem;
   opacity: 0;
-  animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
+  animation: ContentFadeIn 0.8s 0s forwards ease-in;
 }
 
 .logo {
@@ -165,7 +165,7 @@ html {
   padding: 1rem 3rem;
   background-color: var(--bg-color);
   opacity: 0;
-  animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
+  animation: ContentFadeIn 0.8s 0s forwards ease-in;
 }
 
 .nav-active {
@@ -227,7 +227,7 @@ html {
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  animation: ContentFadeIn 0.8s 1.6s forwards ease-in;
+  animation: ContentFadeIn 0.8s 0.5s forwards ease-in;
 }
 
 .banner-image-container {
@@ -519,7 +519,7 @@ html {
 }
 .card__line {
   opacity: 0;
-  animation: LineFadeIn 0.8s 0.8s forwards ease-in;
+  animation: LineFadeIn 1s 0s forwards ease-in;
 }
 
 .project-item:hover .project-image {
@@ -536,7 +536,7 @@ html {
   width: 110%;
   transition: all ease 2s;
   opacity: 0;
-  animation: ImageFadeIn 0.8s 1.4s forwards;
+  animation: ImageFadeIn 0.5s 1s forwards;
 }
 
 @keyframes projectanime {
@@ -604,7 +604,7 @@ html {
   height: 10rem;
   margin: auto 2rem;
   opacity: 0;
-  animation: ContentFadeIn 0.8s 1.6s forwards;
+  animation: ContentFadeIn 0.5s 0s forwards;
   text-align: center;
 }
 
@@ -623,7 +623,7 @@ html {
   margin: 3rem 0 5rem 0;
   text-align: center;
   opacity: 0;
-  animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
+  animation: ContentFadeIn 0.5s 0s forwards ease-in;
 }
 .project-icons a {
   font-size: 2.5rem;
@@ -641,7 +641,7 @@ html {
   border: 0.5rem solid var(--light);
   border-radius: 100%;
   opacity: 0;
-  animation: ContentFadeIn 0.8s 0.8s forwards ease-in;
+  animation: ContentFadeIn 0.5s 0s forwards ease-in;
 }
 .circle-right {
   bottom: -12rem;
@@ -945,12 +945,14 @@ html {
 .path1 {
   stroke-dasharray: 2867.95;
   stroke-dashoffset: 2867.95;
-  animation: line-anime 2s 0.5s ease forwards;
+  /* animation: line-anime 2s 0.5s ease forwards; */
+  animation: line-anime 1s 0s ease forwards;
   stroke: var(--primary);
 }
 .path2 {
   opacity: 0;
-  animation: line-2-anime 1s 2.5s ease forwards;
+  /* animation: line-2-anime 1s 2.5s ease forwards; */
+  animation: line-2-anime 1s 1s ease forwards;
   stroke: var(--primary);
 }
 

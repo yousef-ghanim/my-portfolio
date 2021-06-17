@@ -68,6 +68,7 @@ const Contact = () => {
             opportunity, or you have a question, or you just want to say hi.
           </p>
           <a
+            aria-label="Email"
             href="mailto: yousefghanim85@gmail.com"
             className="btn contact-btn"
           >

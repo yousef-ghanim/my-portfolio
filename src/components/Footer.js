@@ -6,13 +6,25 @@ const Footer = () => {
     <section className="section footer-section">
       <div className="footer-container">
         <div className="footer-icons">
-          <a href="https://linkedin.com/in/yousef-ghanim" target="_blank">
+          <a
+            aria-label="Linkedin"
+            href="https://linkedin.com/in/yousef-ghanim"
+            target="_blank"
+          >
             <FaLinkedin />
           </a>
-          <a href="https://github.com/yousef-ghanim" target="_blank">
+          <a
+            aria-label="Github"
+            href="https://github.com/yousef-ghanim"
+            target="_blank"
+          >
             <FaGithub />
           </a>
-          <a href="mailto: yousefghanim85@gmail.com" target="_blank">
+          <a
+            aria-label="Email"
+            href="mailto: yousefghanim85@gmail.com"
+            target="_blank"
+          >
             <FaEnvelope />
           </a>
         </div>
