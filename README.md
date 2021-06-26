@@ -56,4 +56,4 @@ The goal was to build a personal website (portfolio website) to showcase my proj
 
 This project was an excellent chance to learn new things, by implement many things I have learned from projects tutorials. Such as switching tabs that I used in the “About” Section, Filtering buttons in the “Projects” Section, SVG, and Local Storage.
 
-One of the many challenges I have faced in this project is to deploy the website to the internet, as I used only free services to deploy my previous projects such as Github Pages and Netlify. So, it was a good experience to learn about host, domain, Cpanel, SSL, and many more.
+One of the many challenges I have faced in this project is to deploy the website to the internet, as I had used only free services to deploy my previous projects such as Github Pages and Netlify. So, it was a good experience to learn about host, domain, Cpanel, SSL, and many more.
