@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import About from "./components/About";
+import MyProjects from "./components/MyProjects";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ function App() {
         <>
           <Header />
           <About />
+          <MyProjects />
           <Projects />
           <Contact />
           <Footer />

@@ -1,6 +1,13 @@
 const jobs = [
   {
     id: 1,
+    job: "Interpreter",
+    year: "2021 - present",
+    company: "Túlkaþjónustun slf, Iceland.",
+    info: "English-Arabic interpreter",
+  },
+  {
+    id: 2,
     job: "University instructor",
     year: "2017 - 2018",
     company: "Arab American University",
@@ -8,21 +15,21 @@ const jobs = [
   },
 
   {
-    id: 2,
+    id: 3,
     job: "Filmmaker",
     year: "2015 - 2019",
     company: "Freelance",
     info: "Award winner for the short film 'The Doll'.",
   },
   {
-    id: 3,
+    id: 4,
     job: "Marketing",
     year: "2008 - 2015",
     company: "Al-Ghanim Electronics Co.",
     info: "Marketer, Customer service, Social media, Day-to-day operations.",
   },
   {
-    id: 4,
+    id: 5,
     job: "Master's degree",
     year: "2015 - 2016",
     company: "Limkokwing University of Creative Technology.",
@@ -126,3 +133,14 @@ export const projects = [
 ];
 
 export default jobs;
+
+export const myProjects = [
+  {
+    id: 0,
+    title: "Túlkaþjónustan",
+    preview: "https://pantatulk.netlify.app/",
+    code: "https://github.com/yousef-ghanim/pantatulk",
+    desc: "A website I built for an Icelandic interpretation company.",
+    image: "./images/pantatulk.jpg",
+  },
+];

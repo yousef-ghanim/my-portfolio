@@ -28,7 +28,7 @@ const About = () => {
               <li>React Router</li>
               <li>JavaScript</li>
               <li>JS6</li>
-              <li>Sass</li>
+              <li>Styled Comp.</li>
               <li>CSS3</li>
               <li>Html5</li>
               <li>Git</li>
@@ -38,11 +38,7 @@ const About = () => {
           </div>
           <div className="profile-image-container">
             <div className="image-frame">
-              <img
-                className="profile-image"
-                src={profile}
-                alt="profile picture"
-              />
+              <img className="profile-image" src={profile} alt="profile" />
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@ const Contact = () => {
           <div className="title-container contact-title-container">
             <div className="line contact-title-line"></div>
             <h1 className="contact-title title">
-              <span>4.</span> Contact me
+              <span>5.</span> Contact me
             </h1>
           </div>
 

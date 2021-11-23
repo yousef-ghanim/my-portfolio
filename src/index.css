@@ -433,6 +433,81 @@ html {
   color: var(--secondary);
 }
 
+/* My projects */
+
+.myProjects-section {
+  padding: 8rem 0;
+}
+
+.myProjects-container {
+  margin: 0 auto;
+  max-width: 120rem;
+  text-align: center;
+}
+
+.myProjects-wrapper {
+  text-align: center;
+}
+
+.myProjects-item {
+  width: 80rem;
+  height: 30rem;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.myProjects-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myProjects-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--light);
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+}
+
+.myProjects-item:hover .myProjects-info {
+  opacity: 1;
+}
+
+.myProject-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.myProject-desc {
+  font-size: 2rem;
+}
+
+.myProject-icons {
+  margin-top: 2rem;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+}
+.myProject-preview {
+  color: var(--light);
+}
+.myProject-preview:hover {
+  color: var(--primary);
+}
+
 /* projects */
 
 .projects-section {
@@ -442,7 +517,7 @@ html {
 .projects-title-container {
   width: 50rem;
   position: relative;
-  margin-bottom: 10rem;
+  margin: 0 auto 10rem auto;
 }
 .projects-title {
   font-size: 2.5rem;
@@ -813,6 +888,9 @@ html {
     margin: 2rem auto;
     max-width: 14rem;
     text-align: left;
+  }
+  .myProjects-item {
+    width: 90%;
   }
 }
 @media screen and (max-width: 1200px) {

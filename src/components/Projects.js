@@ -26,7 +26,7 @@ const Projects = () => {
     <section className="section projects-section" id="projects">
       <div className="title-container projects-title-container">
         <h1 className="projects-title title">
-          <span>3.</span> Projects
+          <span>4.</span> Projects
         </h1>
         <div className="line projects-title-line"></div>
       </div>
